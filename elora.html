@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+
+    <style>
+        /* Contoh styling untuk tabel */
+        table {
+          width: 400px;
+          border-collapse: collapse;
+          margin-bottom: 20px;
+          margin : auto;
+          
+        }
+    
+        th,td {
+          border: 1px solid #ddd;
+          padding: 8px;
+          text-align: left;
+        }
+    
+        th {
+          background-color: #f2f2f2;
+          text-align: center;
+        }
+
+        h2 {
+          text-align: center; /* Center the text within h2 */
+        }
+    
+        /* Contoh styling menggunakan kelas CSS */
+        .highlight {
+          background-color: yellow;
+        }
+    
+        .italic {
+          font-style: italic;
+        }
+    
+        .center {
+          text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+<!--
+  <h2>Hitung Tabungan</h2>
+
+  <form id="savingsForm">
+    <label for="initialSavings">Jumlah Tabungan Awal:</label>
+    <input type="number" id="initialSavings" name="initialSavings" placeholder="Masukkan jumlah tabungan awal" required>
+
+    <label for="interestRate">Tingkat Bunga tahunan (%):</label>
+    <input type="number" id="interestRate" name="interestRate" placeholder="Masukkan tingkat bunga tahunan" required>
+
+    <label for="savingPeriod">Periode Simpanan (tahun):</label>
+    <input type="number" id="savingPeriod" name="savingPeriod" placeholder="Masukkan periode simpanan dalam tahun" required>
+
+    <button type="button" onclick="calculateSavings()">Hitung</button>
+  </form>
+  <br>
+
+  
+
+  <table id="resultTable" style="display: none;">
+    
+    <tbody>
+        <td>Jumlah Tabungan Awal</td>
+        <td id="tabAwal"></td>
+      </tr>
+      <tr>
+        <td>Tingkat Bunga tahunan</td>
+        <td id="bunga"></td>
+      </tr>
+      <tr>
+        <td>Periode Simpanan</td>
+        <td id="periode"></td>
+      </tr>
+      <tr>
+        <td>Bunga yang diperoleh</td>
+        <td id="bungaHasil"></td>
+      </tr>
+      <tr>
+        <td>Total Tabungan Akhir</td>
+        <td id="hasil"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    function calculateSavings() {
+      let initialSavings = parseFloat(document.getElementById("initialSavings").value);
+      let interestRate = parseFloat(document.getElementById("interestRate").value);
+      let savingPeriod = parseInt(document.getElementById("savingPeriod").value);
+
+      //menghitung bunga tabungan
+      let interest = (initialSavings * interestRate * savingPeriod) / 100;
+
+      //menghitung total tabungan akhir
+      let totalSavings = initialSavings + interest;
+
+      //menampilkan hasil
+      document.getElementById("tabAwal").innerHTML = "$ " + initialSavings.toFixed(2);
+      document.getElementById("bunga").innerHTML = interestRate + " %";
+      document.getElementById("periode").innerHTML = savingPeriod + " tahun";
+      document.getElementById("bungaHasil").innerHTML = "$ " + interest.toFixed(2);
+      document.getElementById("hasil").innerHTML = "$ " + totalSavings.toFixed(2);
+
+      // Display the result table
+      document.getElementById("resultTable").style.display = "table";
+    }
+
+    //Hitung Salary
+    let basicSalary = parseFloat(prompt("Masukkan gaji dasar karyawan : $ "));
+    let bonus = parseFloat(prompt("Masukkan jumlah bonus : $ "));
+    let deductions = parseFloat(prompt("Masukkan jumlah potongan : $ "));
+
+    let netSalary = basicSalary+bonus-deductions;
+
+    console.log("Gaji Dasar karyawan : $ "+basicSalary.toFixed(2));
+    console.log("Bonus : $ "+bonus.toFixed(2));
+    console.log("Potongan : $ " +deductions.toFixed(2));
+    console.log("Gaji Bersih : $ "+ netSalary.toFixed(2));
+
+  </script>
+-->
+
+<h2>Hitung Gaji Karyawan</h2>
+
+  <form id="salaryForm">
+    <label for="basicSalary">Gaji Dasar Karyawan</label>
+    <input type="number" id="basicSalary" name="basicSalary" placeholder="Masukkan jumlah gaji dasar karyawan" required>
+
+    <label for="bonus">Bonus :</label>
+    <input type="number" id="bonus" name="bonus" placeholder="Masukkan bonus" required>
+
+    <label for="potongan">Potongan :</label>
+    <input type="number" id="potongan" name="potongan" placeholder="Masukkan potongan" required>
+
+    <button type="button" onclick="calculateSalary()">Hitung</button>
+  </form>
+  <br>
+
+  
+
+  <table id="resultTable" style="display: none;">
+    
+    <tbody>
+        <td>Gaji Dasar</td>
+        <td id="basicSalary1"></td>
+      </tr>
+      <tr>
+        <td>Bonus</td>
+        <td id="bonus1"></td>
+      </tr>
+      <tr>
+        <td>Potongan</td>
+        <td id="potongan1"></td>
+      </tr>
+      <tr>
+        <td>Gaji Bersih</td>
+        <td id="netSalary1"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+
+    function calculateSalary() {
+      let basicSalary1 = parseFloat(document.getElementById("basicSalary").value);
+      let bonus1 = parseFloat(document.getElementById("bonus").value);
+      let potongan1 = parseInt(document.getElementById("potongan").value);
+
+      //menghitung bunga tabungan
+      let netSalary = basicSalary1+bonus1-potongan1;
+
+      //menampilkan hasil
+      document.getElementById("basicSalary1").innerHTML = "$ " +basicSalary1.toFixed(2);
+      document.getElementById("bonus1").innerHTML = "$ "+ bonus1.toFixed(2);
+      document.getElementById("potongan1").innerHTML = "$ "+ potongan1.toFixed(2);
+      document.getElementById("netSalary1").innerHTML = "$ " + netSalary.toFixed(2);
+
+      // Display the result table
+      document.getElementById("resultTable").style.display = "table";
+    }
+
+    /*
+    //Hitung Salary
+    let basicSalary = parseFloat(prompt("Masukkan gaji dasar karyawan : $ "));
+    let bonus = parseFloat(prompt("Masukkan jumlah bonus : $ "));
+    let deductions = parseFloat(prompt("Masukkan jumlah potongan : $ "));
+
+    let netSalary = basicSalary+bonus-deductions;
+
+    console.log("Gaji Dasar karyawan : $ "+basicSalary.toFixed(2));
+    console.log("Bonus : $ "+bonus.toFixed(2));
+    console.log("Potongan : $ " +deductions.toFixed(2));
+    console.log("Gaji Bersih : $ "+ netSalary.toFixed(2));*/
+
+  </script>
+    
+</body>
+</html>
